@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Softmagneta: hsl(300, 31%, 85%);
+    --White: hsl(0, 0%, 100%);
+
+    --font-family-poppin: 'Poppins', 'san-serif';
+
+    --font-family-opensans: 'Open sans', 'san-serif';
+
+
+}
+body {
+    margin: 0;
+    background: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: var(--Violet);
+}
+h1 {
+    font-size: 2.5rem;
+    font-family: var(--font-family-poppin);
+}
+p {
+    font-size: 1.125rem;
+    font-family: var(--font-family-opensans);
+    margin-top: 0;
+    color: var(--Softmagneta);
+}
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+.header {
+    margin: 60px 0 0;
+}
+.logo {
+    margin-left: -5px;
+    width: 200px;
+    height: 50px;
+}
+.main-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 80px 0 0;
+}
+.image {
+    width: 52%;
+}
+.content {
+    width: 48%;
+    color: var(--White);
+    padding: 20px 50px 0;
+    display: flex;
+    flex-direction: column;
+}
+a {
+    font-size: 1.125rem;
+    font-family: var(--font-family-poppin);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    text-decoration: none;
+    height: 55px;
+    width: 250px;
+    border-radius: 50px;
+    background-color: var(--White);
+    color: var(--Violet);
+}
+.socials {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.social {
+    height: 35px;
+    margin: 0 7.5px;
+    width: 35px;
+    border-radius: 50%;
+    border: solid white 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon {
+    filter: brightness(0) invert(1);
+}
+@media(max-width: 798px) {
+    body {
+        background: url(images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-color: var(--Violet);
+    }
+    .header {
+        margin: 20px 0 0;
+    }
+    .main-content {
+        flex-direction: column;
+    }
+    .image {
+        width: 100%;
+    }
+    .content {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        padding: 0;
+    }
+    .socials {
+        margin: 100px 0;
+        justify-content: center;
+    }
+}
+@media(max-width: 375px) {
+    h1 {
+        font-size: 1.5625rem;
+    }
+}
